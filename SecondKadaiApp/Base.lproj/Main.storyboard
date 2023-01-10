@@ -16,34 +16,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lk9-WY-y5b">
-                                <rect key="frame" x="159" y="409" width="75" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="こんにちは、名前さん" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeU-CF-Vjc">
+                                <rect key="frame" x="109.66666666666669" y="159" width="174" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lk9-WY-y5b">
+                                <rect key="frame" x="159" y="280" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <segue destination="ZC1-Kw-ZCQ" kind="unwind" unwindAction="unwind:" id="Vix-kj-Eh7"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="こんにちは、名前さん" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeU-CF-Vjc">
-                                <rect key="frame" x="109.66666666666669" y="248" width="174" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Xbb-3T-hXz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="lk9-WY-y5b" firstAttribute="top" secondItem="zeU-CF-Vjc" secondAttribute="bottom" constant="100" id="08b-k9-cT6"/>
+                            <constraint firstItem="zeU-CF-Vjc" firstAttribute="centerX" secondItem="no7-lK-zlz" secondAttribute="centerX" id="12Z-uC-h19"/>
                             <constraint firstItem="lk9-WY-y5b" firstAttribute="centerX" secondItem="no7-lK-zlz" secondAttribute="centerX" id="Jns-Ts-bPw"/>
+                            <constraint firstItem="zeU-CF-Vjc" firstAttribute="top" secondItem="Xbb-3T-hXz" secondAttribute="top" constant="100" id="MiG-qJ-YCx"/>
                             <constraint firstItem="zeU-CF-Vjc" firstAttribute="centerX" secondItem="no7-lK-zlz" secondAttribute="centerX" id="sqS-qh-Azh"/>
+                            <constraint firstItem="lk9-WY-y5b" firstAttribute="centerX" secondItem="no7-lK-zlz" secondAttribute="centerX" id="we2-Up-6iu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="K1U-4D-cmJ"/>
+                    <connections>
+                        <outlet property="greetingLabel" destination="zeU-CF-Vjc" id="7OI-DB-EeD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="45e-42-SU7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ZC1-Kw-ZCQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="156" y="56"/>
+            <point key="canvasLocation" x="184" y="56"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -53,23 +60,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="名前を入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q99-H2-GZc">
-                                <rect key="frame" x="101" y="238" width="191" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前を入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q99-H2-GZc">
+                                <rect key="frame" x="101" y="159" width="191" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9qQ-MR-7Ne">
-                                <rect key="frame" x="180" y="326" width="33" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9qQ-MR-7Ne">
+                                <rect key="frame" x="180" y="280" width="33" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ydw-g1-oSd">
-                                <rect key="frame" x="159" y="422" width="75" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ydw-g1-oSd">
+                                <rect key="frame" x="159" y="414" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <segue destination="s7z-FV-5xW" kind="show" id="lVT-vg-vyP"/>
+                                    <segue destination="s7z-FV-5xW" kind="show" identifier="toNext" id="lVT-vg-vyP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -79,13 +86,24 @@
                             <constraint firstItem="Ydw-g1-oSd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="41A-fp-oWD"/>
                             <constraint firstItem="Q99-H2-GZc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4KL-9B-0cj"/>
                             <constraint firstItem="Q99-H2-GZc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BeF-ua-j51"/>
+                            <constraint firstItem="Q99-H2-GZc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="KWt-WU-P1M"/>
+                            <constraint firstItem="Q99-H2-GZc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OZV-hO-hVg"/>
+                            <constraint firstItem="9qQ-MR-7Ne" firstAttribute="top" secondItem="Q99-H2-GZc" secondAttribute="bottom" constant="100" id="Wm0-bD-ws6"/>
+                            <constraint firstItem="Ydw-g1-oSd" firstAttribute="top" secondItem="9qQ-MR-7Ne" secondAttribute="bottom" constant="100" id="iHk-Kc-56F"/>
+                            <constraint firstItem="Ydw-g1-oSd" firstAttribute="top" secondItem="9qQ-MR-7Ne" secondAttribute="bottom" constant="100" id="j3D-53-mR2"/>
                             <constraint firstItem="Ydw-g1-oSd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kg3-Oy-wEu"/>
                             <constraint firstItem="Ydw-g1-oSd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lFN-i6-Ofx"/>
                             <constraint firstItem="9qQ-MR-7Ne" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="onC-U6-FOf"/>
+                            <constraint firstItem="Ydw-g1-oSd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qPZ-O3-XJp"/>
+                            <constraint firstItem="9qQ-MR-7Ne" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rH7-g8-gGy"/>
                             <constraint firstItem="Q99-H2-GZc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tdt-AD-KF2"/>
+                            <constraint firstItem="Q99-H2-GZc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="ukO-Rd-3lq"/>
                             <constraint firstItem="Q99-H2-GZc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vDf-lQ-wsm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="9qQ-MR-7Ne" id="JGO-Nc-ZdL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="9xm-IR-sXQ">
@@ -95,7 +113,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
             </objects>
-            <point key="canvasLocation" x="-592" y="56"/>
+            <point key="canvasLocation" x="-679" y="56"/>
         </scene>
     </scenes>
     <resources>

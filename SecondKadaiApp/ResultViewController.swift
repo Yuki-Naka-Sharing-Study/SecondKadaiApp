@@ -8,7 +8,8 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-
+    @IBOutlet weak var greetingLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
