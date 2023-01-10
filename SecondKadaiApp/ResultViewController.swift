@@ -13,7 +13,7 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        greetingLabel.text = "\(nameData)さんこんにちは！"
+        greetingLabel.text = "こんにちは、\(nameData)さん"
     }
     
 
