@@ -9,11 +9,11 @@ import UIKit
 
 class ResultViewController: UIViewController {
     @IBOutlet weak var greetingLabel: UILabel!
+    var nameData = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        greetingLabel.text = "\(nameData)さんこんにちは！"
     }
     
 
